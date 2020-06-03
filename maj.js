@@ -1,22 +1,28 @@
 
 function maj(myArgs) {
 
-var myArgs = process.argv.slice(2);
+var myArgs = process.argv[2];
 console.log('myArgs: ', myArgs);
 
-var str = myArgs[0];
-var strFinal = "";
+var strArr = myArgs.split(" ");
 
-for(var i = 0; i <= str.length; i++) {
+for(var i = 0; i < strArr.length; i++) {
 
-  if (i >= 0 && i % 2 !== 0 && str.charAt(i) !== " ") {
-    strFinal = strFinal + str.charAt(i).toUpperCase();
-  } else{
-    strFinal = strFinal + str.charAt(i);
+  str = strArr[i];
+  strFinal = "";
+  for(var a = 0; a < str.length; a++){
+    if (a >= 0 && a % 2 !== 0) {
+      strFinal = strFinal + str.charAt(a).toUpperCase();
+    } else{
+      strFinal = strFinal + str.charAt(a);
+    }
   }
+  strArr[i] = strFinal;
 }
 
-console.log(strFinal.charAt(0).toLowerCase() + strFinal.slice(1));
+var strArr = strArr.join(" ");
+return strArr.charAt(0).toLowerCase() + strArr.slice(1);
 
 }
+
 console.log(maj());
