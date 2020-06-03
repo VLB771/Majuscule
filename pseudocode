@@ -1,0 +1,28 @@
+Argument > function
+
+
+Premier pseudo code:
+Exception pour les espaces retirer du .lenght
+si chara est précédé d'un chara minuscule sauf space, transform maj
+
+Je regarde le char, 
+    si il est le premier il est minuscule
+    si il le précédent est min il est maj
+    si le précédent est "space" je regarde l'anté précédent 
+
+return
+"impossible"
+
+
+Version optimal à venir:
+trouver les espaces dans la string
+extraire les charac dans des var = motn (n étant le nombre d'espaces) 
+avant chaque espace et les charac avant la fin de la string(vu qu'il n'y a pas d'espace)
+passer chaque var dans un if charAt % 2
+Ressortir les var + " " avec une boucle pour chaque var?
+
+Ou alors:
+trouver les espaces stocker leurs positions
+Retirer les espaces passer le if toUpperCase
+Re inserer les espaces
+
